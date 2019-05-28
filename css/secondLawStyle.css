@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+    
+    background: #006dae;
+}
+
+/**********************************/
+
+/* Buttons */
+
+#returnBtn {
+    display: block;
+    text-decoration: none;
+    height: 40px;
+    line-height: 20px;
+    font-size: 10px;
+    background: #006dae;
+    width: 95px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 1px solid #262626;
+    
+    position: fixed;
+    top: 10px;
+    left: 30px;
+}
+
+#returnBtn:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+ul {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    background: #fff;
+    width: 95px;
+    color: #262626;
+    margin: 4px 10px;
+    padding-left: 15px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 1px solid #262626;
+    
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+      opacity: 0;
+      transform: translateY(-300px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+ul li a:hover {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+ul li a:active {
+    background: #ff2a4f;
+}
+
+/**********************************/
+
+/* Main content */
+
+#container {
+    width: 100%;
+    height: 100vh;
+}
+
+#container div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#container div h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#container div img {
+/*
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+*/
+    
+    width: 15%;
+    border-radius: 15px;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    border: 12px solid #006dae;
+    
+    opacity: 1;
+	animation-name: fadeInRightOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2.5s;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 30%;
+    height: 20px;
+    background-color: #006dae;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0; bottom: -20%; left: 0; right: 0;
+    margin: auto;
+    opacity: 0.85;
+}
+
+#container div img:hover {
+    opacity: 0.5;
+}
+
+#container div img:hover + .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#container div .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+@keyframes fadeInRightOpacity {
+	0% {
+      opacity: 0;
+      transform: translateX(-300px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+/********************************/
+
+/****** Tabs ******/
+
+/* Equation */
+
+#container div#equation {
+    background-image: url(/gallery/eqnBackground.jpg);
+/*    background-image: no-repeat;*/
+}
+
+/* Vector Field */
+
+#vectorText {
+    display: none;
+    width: 50%;
+    height: 18%;
+    background-color: #006dae;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0; bottom: -30%; left: 0; right: 0;
+    margin: auto;
+    opacity: 0.85;
+    overflow: auto;
+}
+
+#info {
+    color: #006dae;
+    background: #eee;
+    width: 40px;
+    border-radius: 5px;
+    font-style: normal;
+    text-transform: lowercase;
+}
+
+#info:hover, #h1vecField:hover {
+    opacity: 0.5;
+}
+
+#h1vecField:hover + #vectorText {
+    display: block;
+    opacity: 1;
+}
+
+#container div#vector-field {
+    background-image: url(/gallery/vectorBgGif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Divergence */
+
+#divergenceText {
+    display: none;
+    width: 50%;
+    height: 12%;
+    background-color: #006dae;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0; bottom: -30%; left: 0; right: 0;
+    margin: auto;
+    opacity: 0.85;
+    overflow: auto;
+}
+
+#h1divergence:hover {
+    opacity: 0.5;
+}
+
+#h1divergence:hover + #divergenceText {
+    display: block;
+    opacity: 1;
+}
+
+#container div#divergence {
+    background-image: url(/gallery/divergingRoads.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Magnetic Field */
+
+#magText {
+    display: none;
+    width: 50%;
+    height: 30%;
+    background-color: #006dae;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    top: 0; bottom: -40%; left: 0; right: 0;
+    margin: auto;
+    opacity: 0.75;
+    overflow: auto;
+}
+
+#h1magField:hover {
+    opacity: 0.5;
+}
+
+#h1magField:hover + #magText {
+    display: block;
+    opacity: 1;
+}
+
+#container div#magnetic-field {
+    background-image: url(/gallery/magneticBackground.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+
+/**********************************/
