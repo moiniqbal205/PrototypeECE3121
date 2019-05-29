@@ -199,7 +199,7 @@ ul li a:active {
 /* Equation */
 
 #container div#equation {
-    background-image: url(/gallery/eqnBackground.jpg);
+    background-image: url("https://i.pinimg.com/originals/37/73/a1/3773a1822965f7219b36eff612779b10.jpg");
 /*    background-image: no-repeat;*/
 }
 
@@ -222,8 +222,8 @@ ul li a:active {
 }
 
 #info {
-    color: #006dae;
-    background: #eee;
+    color: #eee;
+    background: #006dae;
     width: 40px;
     border-radius: 5px;
     font-style: normal;
@@ -240,7 +240,7 @@ ul li a:active {
 }
 
 #container div#vector-field {
-    background-image: url(/gallery/vectorBgGif.gif);
+    background-image: url("https://i.pinimg.com/originals/99/89/fd/9989fddb2ba58e5612a037689b35e49f.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -273,7 +273,7 @@ ul li a:active {
 }
 
 #container div#divergence {
-    background-image: url(/gallery/divergingRoads.gif);
+    background-image: url("https://cdn-images-1.medium.com/max/2000/1*_QnZxAWvqRzIwXDbtMZO4Q.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -306,7 +306,7 @@ ul li a:active {
 }
 
 #container div#magnetic-field {
-    background-image: url(/gallery/magneticBackground.gif);
+    background-image: url("https://66.media.tumblr.com/ed61f87edcd8adbe723dfca3e4dadc7b/tumblr_opkh0ngNsA1w7onpko1_400.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
