@@ -19,4 +19,12 @@ h6 {
 
 /* **************** */
 
-/* Icons and reference */
+.blink {
+    color: #006dae;
+	animation: blink 1.3s linear infinite;
+    display: inline;
+}
+
+@keyframes blink{
+    50%{opacity: 0;}
+}
